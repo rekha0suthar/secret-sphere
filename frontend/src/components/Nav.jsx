@@ -18,7 +18,7 @@ const Nav = () => {
   const handlePopup = () => setIsShow(!isShow);
   return (
     <div className="nav-container">
-      <h1 onClick={() => navigate('/dashboard')}>ShareSecret</h1>
+      <h1 onClick={() => navigate('/dashboard')}>SecretSphere</h1>
       {token && (
         <div className="btns">
           <div className="logout" onClick={handlePopup}>
