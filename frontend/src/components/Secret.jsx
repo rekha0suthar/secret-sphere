@@ -10,7 +10,7 @@ const Secret = ({ secret }) => {
 
   const navigate = useNavigate();
   return (
-    <div className="post-card">
+    <div className="secret-card">
       <div className="secret-header">
         <h2>Anonymous User</h2>
         {userId === secret.userId && (

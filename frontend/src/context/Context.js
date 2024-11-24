@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-const BASE_API_URL = 'http://localhost:7000/api';
+const BASE_API_URL = 'https://secret-sphere-backend.vercel.app/api'; //'http://localhost:7000/api';
 
 const Context = createContext({});
 

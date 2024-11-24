@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { Context } from '../context/Context';
 import '../styles/secret-form.css';
-import { useNavigate } from 'react-router-dom';
 
 const SecretForm = () => {
   const { title, setTitle, content, setContent, addSecret, user } =
