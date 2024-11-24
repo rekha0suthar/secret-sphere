@@ -3,7 +3,7 @@ import { Context } from '../context/Context';
 import '../styles/secret-form.css';
 
 const SecretForm = () => {
-  const { title, setTitle, content, setContent, addSecret, user } =
+  const { title, setTitle, content, setContent, loading, addSecret, user } =
     useContext(Context);
   return (
     <div className="secret-form">
@@ -27,7 +27,7 @@ const SecretForm = () => {
         />
 
         <button className="add-secret" type="submit">
-          Share Secret
+          {loading ? 'Sharing...' : 'Share Secret'}
         </button>
       </form>
       <a href="/secrets">Explore secrets shared by others</a>

@@ -4,8 +4,15 @@ import { useParams } from 'react-router-dom';
 import Nav from '../components/Nav';
 
 const EditSecret = () => {
-  const { title, setTitle, content, setContent, updateSecret, getUserSecret } =
-    useContext(Context);
+  const {
+    title,
+    setTitle,
+    content,
+    setContent,
+    updateSecret,
+    getUserSecret,
+    loading,
+  } = useContext(Context);
   const { id } = useParams();
   useEffect(() => {
     getUserSecret(id);
@@ -33,7 +40,7 @@ const EditSecret = () => {
           />
 
           <button className="add-secret" type="submit">
-            Share Secret
+            {loading ? 'Sharing...' : 'Share Secret'}
           </button>
         </form>
       </div>

@@ -167,6 +167,7 @@ const ContextProvider = ({ children }) => {
   const addSecret = async (e) => {
     e.preventDefault();
     try {
+      setLoading(true);
       await axios.post(
         `${BASE_API_URL}/secret/`,
         { userId, title, content },
@@ -182,12 +183,15 @@ const ContextProvider = ({ children }) => {
       navigate('/secrets');
     } catch (err) {
       console.error(err);
+    } finally {
+      setLoading(false);
     }
   };
 
   // Method to fetch all secrets
   const getSecrets = async () => {
     try {
+      setLoading(true);
       const response = await axios.get(
         `${BASE_API_URL}/secret/?page=${currentPage}&limit=4`,
         {
@@ -202,6 +206,8 @@ const ContextProvider = ({ children }) => {
       setTotalPages(response.data.totalPages);
     } catch (err) {
       console.error(err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -248,6 +254,7 @@ const ContextProvider = ({ children }) => {
   const updateSecret = async (e, secretId) => {
     e.preventDefault();
     try {
+      setLoading(true);
       await axios.put(
         `${BASE_API_URL}/secret/${secretId}`,
         { title, content },
@@ -264,6 +271,8 @@ const ContextProvider = ({ children }) => {
       setContent('');
     } catch (err) {
       toast.error(err);
+    } finally {
+      setLoading(false);
     }
   };
   return (
