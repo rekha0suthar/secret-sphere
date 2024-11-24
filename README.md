@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# SecretSphere
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Simple Secret sharing application. Users can create account and share their secret and others will not know who's secret is.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+1. User Authentication
+   a. Sign Up
+   b. Login
+   c. Forget Password
+   d. Reset Password
+   e. Logout
+2. Secrets
+   a. Add secret
+   b. Edit or Delete
+3. All authenticated user can see all the secrets but no one know who shared
+4. Pagination
+5. Response user interface for all kind of screens
 
-### `npm start`
+### Technologies used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Backend
+   a. Express - backend setup and api routes
+   b. Mongoose - connection with DB and user schema
+   c. JSON WEB TOKEN - for user authentication
+   d. Bcrypt - Password hashing
+   e. Cors - for cross origin request
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Frontend
+   a. React - Build user interface components
+   b. React Router Dom - routing
+   c. Context api - Glocal state management
+   d. React hooks - define states
+   e. Toastify - alert popups
+   f. React icons - icons
+   g. CSS - styling and responsiveness(media query)
 
-### `npm test`
+3. Database
+   a. MongoDB Atlas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Steps to Run Application
 
-### `npm run build`
+1. git clone -- https://github.com/rekha0suthar/secret-sphere
+2. cd frontend
+   a. npm install
+   b. npm start
+3. cd backend
+   a. npm install
+   b. create .env file and add these two environment variables
+   (i) JWT_SECRET=your_secret_key
+   (ii) MONGO_URI=your_mongodb_uri
+   c. npm start or npm run dev
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Demo Link
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://secret-sphere.vercel.app/
