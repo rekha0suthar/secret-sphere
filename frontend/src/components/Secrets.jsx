@@ -42,7 +42,6 @@ const Secrets = () => {
               ))}
             </div>
             <Pagination />
-            {/* Show pagination if more than 10 secrets */}
           </>
         )}
       </div>
