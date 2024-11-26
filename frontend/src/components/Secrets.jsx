@@ -5,6 +5,8 @@ import Secret from './Secret';
 import Nav from './Nav';
 import Pagination from './Pagination';
 import Spinner from '../assets/spinner.gif';
+import { MdArrowBackIosNew } from 'react-icons/md';
+
 const Secrets = () => {
   const {
     secrets,
@@ -21,6 +23,9 @@ const Secrets = () => {
     <>
       <Nav />
       <div className="secret-container">
+        <a href="/dashboard">
+          <MdArrowBackIosNew /> Back to Share Secret
+        </a>
         {loading ? (
           <div className="loading">
             <img src={Spinner} alt="Loading..." />
